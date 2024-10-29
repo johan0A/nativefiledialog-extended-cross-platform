@@ -96,7 +96,7 @@ pub fn build(b: *std.Build) void {
 }
 
 pub fn addPaths(mod: *std.Build.Module) void {
-    if (mod.resolved_target.?.result.os.tag == .macos) @import("xcode_frameworks").addPaths(mod);
+    if (mod.resolved_target.?.result.os.tag == .macos) @import("xcode-frameworks").addPaths(mod);
 }
 
 const test_sources: []const []const u8 = &.{
